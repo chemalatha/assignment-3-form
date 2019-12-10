@@ -1,0 +1,55 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "javascript",
+      "details": "javascript is very demanding language"
+    },
+    {
+      "id": 2,
+      "name": "nodejs",
+      "details": "nodejs is backend written in Js"
+    },
+    {
+      "id": 3,
+      "name": "python",
+      "details": "python is OOPS now a days"
+    },
+    {
+      "id": 979,
+      "name": "Java",
+      "details": "Java Details"
+    },
+    {
+      "id": 42,
+      "name": "C#",
+      "details": "C# for the backend"
+    }
+  ],
+  "enquiries": [
+    {
+      "id": 170,
+      "name": "Hema",
+      "phone": "987",
+      "email": "hemalatha.cgg@gmail.com",
+      "course": "java",
+      "comments": "comments"
+    },
+    {
+      "id": 207,
+      "name": "Sai",
+      "phone": "86",
+      "email": "sai@gmail.com",
+      "course": "ABC",
+      "comments": "just like that"
+    },
+    {
+      "id": 443,
+      "name": "Teju",
+      "phone": "434343",
+      "email": "teju@gmail.com",
+      "course": "Barbie",
+      "comments": "for fun"
+    }
+  ]
+}
