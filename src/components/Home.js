@@ -1,38 +1,24 @@
-import React,{Component} from 'react';
-import EnquiryView from './EnquiryView';
+import React , {Component} from 'react';
+import {connect} from 'react-redux';
+import * as actions from '../actions';
+import CourseList from '../containers/CourseList';
 
-const url = 'http://localhost:8900/courses';
+class Home extends Component{
 
-class userEnquiries extends Component{
-    constructor(){
-        super();
-        this.state = {
-            enquiries:[]
-        }
-    }
     componentDidMount(){
-        fetch(url,{method:'GET'})
-            .then((res) => res.json())
-            .then((data) => {
-                console.log(data);
-                this.setState({
-                    enquiries:data
-                }  
-                )
-            })
+        this.props.courselist();
     }
     render(){
         return(
-            <div className="panel panel-primary">
-                <div className="panel-heading">Forms Header</div>
-                <div className="panel-body">
-                    <div className="jumbotron">
-                        <EnquiryView topicdata={this.state.enquiries} />
-                    </div>
-                </div>
+            <div>
+                <CourseList courses={this.props.courses} />
             </div>
         )
     }
 }
-
-export default userEnquiries;
+function mapStateToProps(state){
+    return{
+        courses:state.courses
+    }
+}
+export default connect(mapStateToProps,actions)(Home);
